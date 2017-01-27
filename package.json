@@ -1,10 +1,12 @@
 {
   "name": "trivial-deferred",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "The most dead-simple trivial Deferred implementation",
   "main": "index.js",
   "dependencies": {},
-  "devDependencies": {"tap": "9||10"},
+  "devDependencies": {
+    "tap": "9||10"
+  },
   "scripts": {
     "test": "tap test.js --100"
   },
