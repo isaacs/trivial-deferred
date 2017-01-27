@@ -1,14 +1,18 @@
 module.exports = Deferred
 
-var P = Promise
+var P
+/* istanbul ignore next */
 try {
-  P = require('bluebird')
-} catch (er) {}
+  P = Promise
+} catch (er) {
+  try {
+    P = require('bluebird')
+  } catch (er) {
+    throw new Error('this module requires a Promise implementation.  ' +
+                    'Try installing bluebird.')
+  }
+}
 
-/* istanbul ignore if */
-if (!P)
-  throw new Error('this module requires a Promise implementation.  ' +
-                  'Try installing bluebird.')
 
 function Deferred () {
   this.resolve = null
