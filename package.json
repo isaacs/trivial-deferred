@@ -1,14 +1,20 @@
 {
   "name": "trivial-deferred",
   "version": "1.0.1",
+  "files": [
+    "index.js"
+  ],
   "description": "The most dead-simple trivial Deferred implementation",
   "main": "index.js",
-  "dependencies": {},
   "devDependencies": {
-    "tap": "9||10"
+    "tap": "^15.1.6"
   },
   "scripts": {
-    "test": "tap test.js --100"
+    "test": "tap",
+    "snap": "tap",
+    "preversion": "npm test",
+    "postversion": "npm publish",
+    "prepublishOnly": "git push origin --follow-tags"
   },
   "repository": {
     "type": "git",
@@ -20,5 +26,8 @@
   "bugs": {
     "url": "https://github.com/isaacs/trivial-deferred/issues"
   },
-  "homepage": "https://github.com/isaacs/trivial-deferred#readme"
+  "homepage": "https://github.com/isaacs/trivial-deferred#readme",
+  "tap": {
+    "check-coverage": true
+  }
 }
