@@ -1,6 +1,5 @@
-import Deferred from '../'
+import { Deferred } from '../'
 import t from 'tap'
-t.equal(Deferred.Deferred, Deferred)
 const d = new Deferred()
 t.match(d, {
   resolve: Function,

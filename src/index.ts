@@ -3,7 +3,6 @@
  * rejected from outside the Promise constructor.
  */
 export class Deferred<T = unknown> {
-
   /**
    * Resolve the promise
    */
@@ -21,14 +20,4 @@ export class Deferred<T = unknown> {
     this.resolve = res
     this.reject = rej
   })
-
-  /**
-   * static reference to the class, so that
-   * require('trivial-deferred').Deferred works
-   */
-  static get Deferred() {
-    return Deferred
-  }
 }
-
-export default Deferred

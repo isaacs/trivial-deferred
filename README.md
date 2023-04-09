@@ -6,15 +6,10 @@ A very dead-simple trivial Deferred implementation
 
 ```ts
 // hybrid module, either esm or cjs styles work
-import Deferred from 'trivial-deferred'
-// or
-const Deferred = require('trivial-deferred')
-// or even
-import Deferred from 'https://unpkg.com/trivial-deferred/dist/mjs/index.js'
-
-// or if you like this way better, this works, too:
 import { Deferred } from 'trivial-deferred'
+// or
 const { Deferred } = require('trivial-deferred')
+// or even
 import { Deferred } from 'https://unpkg.com/trivial-deferred/dist/mjs/index.js'
 
 // type defaults to `unknown`, just like Promise<T>
